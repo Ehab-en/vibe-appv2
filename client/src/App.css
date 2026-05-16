@@ -1,0 +1,21 @@
+.darkInput {
+  background-color: #0f172a !important;
+  color: white !important;
+}
+
+.darkInput::placeholder {
+  color: #cbd5e1 !important;
+  opacity: 1 !important;
+}
+
+.darkInput::-webkit-input-placeholder {
+  color: #cbd5e1 !important;
+}
+
+.darkInput:-ms-input-placeholder {
+  color: #cbd5e1 !important;
+}
+
+.darkInput::-ms-input-placeholder {
+  color: #cbd5e1 !important;
+}
