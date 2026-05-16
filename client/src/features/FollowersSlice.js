@@ -36,7 +36,7 @@ export const toggleFollow =
             const res =
                 await axios.post(
 
-                    "http://localhost:3002/follow",
+                    "https://vibe-appv2.onrender.com/follow",
 
                     {
                         followerEmail,
@@ -62,7 +62,7 @@ export const getFollowers =
 
             const res =
                 await axios.get(
-                    `http://localhost:3002/followers/${email}`
+                    `https://vibe-appv2.onrender.com/followers/${email}`
                 );
 
             return res.data;

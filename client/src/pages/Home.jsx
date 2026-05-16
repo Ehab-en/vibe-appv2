@@ -120,7 +120,7 @@ const Home = () => {
 
         const res =
           await axios.get(
-            "http://localhost:3002/users"
+            "https://vibe-appv2.onrender.com/users"
           );
 
         setUsers(

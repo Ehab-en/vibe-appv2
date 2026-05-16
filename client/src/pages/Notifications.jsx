@@ -100,7 +100,7 @@ const Notifications = () => {
 
         await axios.delete(
 
-          `http://localhost:3002/deleteNotification/${id}`
+          `https://vibe-appv2.onrender.com/deleteNotification/${id}`
 
         );
 

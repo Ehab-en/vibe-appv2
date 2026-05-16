@@ -15,7 +15,7 @@ export const getNotifications = createAsyncThunk(
   async (email) => {
 
     const res = await axios.get(
-      `http://localhost:3002/notifications/${email}`
+      `https://vibe-appv2.onrender.com/notifications/${email}`
     );
 
     return res.data.notifications;

@@ -119,7 +119,7 @@ const EditProfile = () => {
         const res =
           await axios.put(
 
-            "http://localhost:3002/updateProfile",
+            "https://vibe-appv2.onrender.com/updateProfile",
 
             {
 

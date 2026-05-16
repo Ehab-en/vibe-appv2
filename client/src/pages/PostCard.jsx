@@ -105,7 +105,7 @@ const PostCard = ({
 
         await axios.delete(
 
-          `http://localhost:3002/deletePost/${post._id}`
+          `https://vibe-appv2.onrender.com/deletePost/${post._id}`
 
         );
 

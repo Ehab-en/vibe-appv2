@@ -13,7 +13,7 @@ const initialState = {
 export const getPosts = createAsyncThunk(
   "posts/getPosts",
   async () => {
-    const res = await axios.get("http://localhost:3002/posts");
+    const res = await axios.get("https://vibe-appv2.onrender.com/posts");
     return res.data.posts;
   }
 );
@@ -22,7 +22,7 @@ export const getPosts = createAsyncThunk(
 export const createPost = createAsyncThunk(
   "posts/createPost",
   async (postData) => {
-    const res = await axios.post("http://localhost:3002/posts", postData);
+    const res = await axios.post("https://vibe-appv2.onrender.com/posts", postData);
     return res.data.message;
   }
 );
@@ -31,7 +31,7 @@ export const createPost = createAsyncThunk(
 export const toggleLike = createAsyncThunk(
   "posts/toggleLike",
   async ({ postId, userEmail }) => {
-    const res = await axios.post("http://localhost:3002/like", {
+    const res = await axios.post("https://vibe-appv2.onrender.com/like", {
       postId,
       userEmail
     });
@@ -47,7 +47,7 @@ export const toggleLike = createAsyncThunk(
 export const addComment = createAsyncThunk(
   "posts/addComment",
   async ({ postId, userEmail, username, profilepic, text }) => {
-    const res = await axios.post("http://localhost:3002/comment", {
+    const res = await axios.post("https://vibe-appv2.onrender.com/comment", {
       postId,
       userEmail,
       username,

@@ -58,7 +58,7 @@ export const addUser =
         const response =
           await axios.post(
 
-            "http://localhost:3002/register",
+            "https://vibe-appv2.onrender.com/register",
 
             userData
 
@@ -91,7 +91,7 @@ export const login =
         const response =
           await axios.post(
 
-            "http://localhost:3002/login",
+            "https://vibe-appv2.onrender.com/login",
 
             userData
 
