@@ -148,6 +148,10 @@ export const UserSlice =
 
         state.user = null;
 
+        state.isSuccess = false;
+
+        state.message = "";
+
         localStorage.removeItem(
           "user"
         );

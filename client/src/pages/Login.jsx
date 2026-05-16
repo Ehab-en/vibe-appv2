@@ -16,6 +16,7 @@ const Login = () => {
   const dispatch = useDispatch();
   const message = useSelector((state) => state.user.message);
   const isSuccess = useSelector((state) => state.user.isSuccess);
+  const user = useSelector((state) => state.user.user);
 
   const navigate = useNavigate();
 
@@ -41,10 +42,10 @@ const Login = () => {
 
   //  redirect after success
   useEffect(() => {
-    if (isSuccess) {
+    if (isSuccess && user) {
       navigate("/home");
     }
-  }, [isSuccess]);
+  }, [isSuccess, user]);
 
   return (
     <div className="d-flex vh-100">
