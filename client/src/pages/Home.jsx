@@ -7,6 +7,10 @@ import {
   useSelector
 } from "react-redux";
 
+import { useNavigate } from "react-router-dom";
+
+import { clearUser } from "../features/UserSlice";
+
 import {
   Row,
   Col,
@@ -37,6 +41,14 @@ const Home = () => {
 
   const dispatch =
     useDispatch();
+
+  const navigate =
+    useNavigate();
+
+  const handleLogout = () => {
+    dispatch(clearUser());
+    navigate("/");
+  };
 
   const { posts } =
     useSelector(
@@ -225,6 +237,7 @@ const Home = () => {
 
       <SideBar
         darkMode={darkMode}
+        handleLogout={handleLogout}
       />
 
       <Col

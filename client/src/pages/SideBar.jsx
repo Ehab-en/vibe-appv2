@@ -249,6 +249,8 @@ const SideBar = ({
       {/* SIGN OUT */}
       <div
 
+        onClick={handleLogout}
+
         style={{
 
           marginTop:
@@ -273,7 +275,10 @@ const SideBar = ({
             "16px",
 
           opacity:
-            "0.7"
+            "0.7",
+
+          cursor:
+            "pointer"
 
         }}
       >
