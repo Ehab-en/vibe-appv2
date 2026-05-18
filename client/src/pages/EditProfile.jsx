@@ -371,7 +371,6 @@ const EditProfile = () => {
 
       </Col>
 
-      {/* CENTER */}
       <Col
         md="8"
 

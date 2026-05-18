@@ -21,7 +21,7 @@ const initialState = {
 
 };
 
-// ================= FOLLOW =================
+// FOLLOW
 
 export const toggleFollow =
     createAsyncThunk(
@@ -51,7 +51,7 @@ export const toggleFollow =
 
     );
 
-// ================= GET FOLLOWERS =================
+//GET FOLLOWERS
 
 export const getFollowers =
     createAsyncThunk(
@@ -71,7 +71,7 @@ export const getFollowers =
 
     );
 
-// ================= SLICE =================
+//SLICE 
 
 const FollowerSlice =
     createSlice({
@@ -86,7 +86,7 @@ const FollowerSlice =
 
             builder
 
-                // ✅ GET FOLLOWERS
+                //  GET FOLLOWERS
                 .addCase(
                     getFollowers.pending,
 
@@ -134,7 +134,7 @@ const FollowerSlice =
                     }
                 )
 
-                // ✅ FOLLOW / UNFOLLOW
+                //FOLLOW / UNFOLLOW
                 .addCase(
                     toggleFollow.pending,
 

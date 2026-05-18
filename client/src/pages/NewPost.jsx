@@ -48,7 +48,7 @@ const NewPost = () => {
     setAddress] =
     useState("");
 
-  // ✅ PUBLIC / PRIVATE
+  //PUBLIC / PRIVATE
   const [isPublic,
     setIsPublic] =
     useState(true);

@@ -8,7 +8,7 @@ const initialState = {
   isError: false
 };
 
-// ✅ GET NOTIFICATIONS
+// GET NOTIFICATIONS
 export const getNotifications = createAsyncThunk(
   "notifications/getNotifications",
 
@@ -35,7 +35,7 @@ const NotificationsSlice = createSlice({
 
     builder
 
-      // 🔥 GET NOTIFICATIONS
+      // GET NOTIFICATIONS
       .addCase(getNotifications.pending, (state) => {
 
         state.isLoading = true;

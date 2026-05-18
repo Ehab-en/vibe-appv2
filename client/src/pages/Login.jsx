@@ -50,7 +50,6 @@ const Login = () => {
   return (
     <div className="d-flex vh-100">
 
-      {/* LEFT SIDE (same design as register) */}
       <div
         className="text-white d-flex flex-column justify-content-between p-5"
         style={{

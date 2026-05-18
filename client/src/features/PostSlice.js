@@ -9,7 +9,7 @@ const initialState = {
   isError: false
 };
 
-// ✅ GET POSTS
+// GET POSTS
 export const getPosts = createAsyncThunk(
   "posts/getPosts",
   async () => {
@@ -18,7 +18,7 @@ export const getPosts = createAsyncThunk(
   }
 );
 
-// ✅ CREATE POST
+// CREATE POST
 export const createPost = createAsyncThunk(
   "posts/createPost",
   async (postData) => {
@@ -27,7 +27,7 @@ export const createPost = createAsyncThunk(
   }
 );
 
-// ✅ TOGGLE LIKE
+// TOGGLE LIKE
 export const toggleLike = createAsyncThunk(
   "posts/toggleLike",
   async ({ postId, userEmail }) => {
@@ -43,7 +43,7 @@ export const toggleLike = createAsyncThunk(
   }
 );
 
-// ✅ ADD COMMENT
+// ADD COMMENT
 export const addComment = createAsyncThunk(
   "posts/addComment",
   async ({ postId, userEmail, username, profilepic, text }) => {
@@ -67,7 +67,7 @@ const PostSlice = createSlice({
 
     builder
 
-      // 🔥 GET POSTS
+      //  GET POSTS
       .addCase(getPosts.pending, (state) => {
         state.isLoading = true;
       })
@@ -81,7 +81,7 @@ const PostSlice = createSlice({
         state.isError = true;
       })
 
-      // 🔥 CREATE POST
+      // CREATE POST
       .addCase(createPost.pending, (state) => {
         state.isLoading = true;
       })
@@ -95,7 +95,7 @@ const PostSlice = createSlice({
         state.isError = true;
       })
 
-      // 🔥 TOGGLE LIKE
+      // TOGGLE LIKE
       .addCase(toggleLike.pending, (state) => {
         state.isLoading = true;
       })
@@ -115,7 +115,7 @@ const PostSlice = createSlice({
         state.isError = true;
       })
 
-      // 🔥 ADD COMMENT (THIS WAS MISSING)
+      // ADD COMMENT
       .addCase(addComment.pending, (state) => {
         state.isLoading = true;
       })

@@ -5,7 +5,7 @@ import {
 
 import axios from "axios";
 
-// ✅ SAFE USER LOAD
+// SAFE USER LOAD
 let userFromStorage = null;
 
 try {
@@ -45,7 +45,7 @@ const initialState = {
 
 };
 
-// ✅ REGISTER
+// REGISTER
 export const addUser =
   createAsyncThunk(
 
@@ -78,7 +78,7 @@ export const addUser =
 
   );
 
-// ✅ LOGIN
+// LOGIN
 export const login =
   createAsyncThunk(
 
@@ -120,7 +120,7 @@ export const UserSlice =
 
     reducers: {
 
-      // ✅ SET USER
+      // SET USER
       setUser: (
         state,
         action
@@ -141,7 +141,7 @@ export const UserSlice =
 
       },
 
-      // ✅ LOGOUT / CLEAR USER
+      // LOGOUT / CLEAR USER
       clearUser: (
         state
       ) => {
@@ -164,7 +164,7 @@ export const UserSlice =
 
       builder
 
-        // ✅ REGISTER
+        // REGISTER
         .addCase(
 
           addUser.pending,
@@ -208,7 +208,7 @@ export const UserSlice =
 
         )
 
-        // ✅ LOGIN
+        // LOGIN
         .addCase(
 
           login.pending,
@@ -232,7 +232,7 @@ export const UserSlice =
             state.message =
               action.payload.message;
 
-            // ✅ LOGIN SUCCESS
+            // LOGIN SUCCESS
             if (
               action.payload.message ===
               "success"
@@ -255,7 +255,7 @@ export const UserSlice =
 
             }
 
-            // ❌ LOGIN FAILED
+            // LOGIN FAILED
             else {
 
               state.isSuccess = false;
@@ -286,7 +286,7 @@ export const UserSlice =
 
   });
 
-// ✅ EXPORT ACTIONS
+// EXPORT ACTIONS
 export const {
 
   setUser,
@@ -295,5 +295,5 @@ export const {
 
 } = UserSlice.actions;
 
-// ✅ EXPORT REDUCER
+// EXPORT REDUCER
 export default UserSlice.reducer;
